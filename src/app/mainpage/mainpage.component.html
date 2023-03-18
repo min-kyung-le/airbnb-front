@@ -1,6 +1,5 @@
 <h1>Main Page</h1>
-<div ng-app="airbnb" ng-controller="Hello as people">
-  <h2>{{ people.firstName | uppercase }} Details</h2>
-  <div><span>firstName: </span>{{ people.firstName }}</div>
-  <div><span>lastName: </span>{{ people.lastName }}</div>
+<div ng-app="airbnb" *ngFor="let one of menuList">
+  <p>id : {{ one.id }}</p>
+  <p>name : {{ one.name }}</p>
 </div>
