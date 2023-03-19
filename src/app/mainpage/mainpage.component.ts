@@ -11,17 +11,27 @@ import { MainpageService } from './mainpage.service';
 })
 export class MainpageComponent {
   menuList: Array<Menu> = [];
+  roomList: Array<Room> = [];
 
   constructor(private mainpageService: MainpageService) {}
 
   ngOnInit() {
+    console.log('====ngOnInit====');
     this.getMenus();
+    this.getRooms();
   }
 
   getMenus(): void {
     this.mainpageService.getMenus().subscribe((menus) => {
-      this.menuList = menus;
-      console.log('MENUS', menus);
+      console.log('menus', menus);
+      this.menuList = menus.content;
+    });
+  }
+
+  getRooms(): void {
+    this.mainpageService.getRooms().subscribe((room) => {
+      console.log('room', room);
+      this.roomList = room.content;
     });
   }
 }

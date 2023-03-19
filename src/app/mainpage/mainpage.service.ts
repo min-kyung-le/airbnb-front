@@ -5,12 +5,17 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class MainpageService {
-  testUrl = 'http://www.localhost:8080/menus';
+  menuUrl = 'http://www.localhost:8080/menulist';
+  roomUrl = 'http://www.localhost:8080/roomlist';
 
   constructor(private http: HttpClient) {}
 
   /** GET heroes from the server */
   getMenus(): Observable<any> {
-    return this.http.get(this.testUrl);
+    return this.http.get(this.menuUrl);
+  }
+
+  getRooms(): Observable<any> {
+    return this.http.get(this.roomUrl);
   }
 }

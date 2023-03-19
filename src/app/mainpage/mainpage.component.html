@@ -1,5 +1,9 @@
 <h1>Main Page</h1>
-<div ng-app="airbnb" *ngFor="let one of menuList">
-  <p>id : {{ one.id }}</p>
-  <p>name : {{ one.name }}</p>
+<div *ngFor="let one of menuList">
+  <p>id : {{ one.id }} // name : {{ one.name }}</p>
+</div>
+
+<div *ngFor="let one of roomList">
+  <p>title : {{ one.title }}</p>
+  <p>location : {{ one.location }}</p>
 </div>
