@@ -1,0 +1,43 @@
+.menu-con {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.menu-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.menu-div-2:hover {
+  color: red;
+}
+
+.menu-div-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-p {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-span {
+  width: 100%;
+  display: inline;
+  text-align: center;
+}
+
+.menuname {
+  white-space: nowrap;
+  position: relative;
+}
+
+.font {
+  font-size: 12px;
+  font-style: "Circular", -apple-system, "BlinkMacSystemFont", "Roboto",
+    "Helvetica Neue", sans-serif;
+}

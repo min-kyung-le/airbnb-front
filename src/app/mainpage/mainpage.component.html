@@ -1,9 +1,44 @@
 <h1>Main Page</h1>
-<div *ngFor="let one of menuList">
-  <p>id : {{ one.id }} // name : {{ one.name }}</p>
-</div>
+<div class="container">
+  <div class="menu-con">
+    <div class="menu-div">
+      <div class="menu-div-2" *ngFor="let one of menuList">
+        <div class="menu-p">
+          <span class="menu-span">
+            <img
+              class="i1wps9q8 dir dir-ltr"
+              src="https://a0.muscache.com/pictures/3726d94b-534a-42b8-bca0-a0304d912260.jpg"
+              alt=""
+              width="24"
+              height="24"
+            />
+          </span>
+        </div>
+        <div class="menuname">
+          <span class="font">{{ one.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div *ngFor="let one of roomList">
-  <p>title : {{ one.title }}</p>
-  <p>location : {{ one.location }}</p>
+  <div class="room-con">
+    <div class="room-div">
+      <div class="room-div-2" *ngFor="let one of roomList">
+        <div class="roomname">
+          <span class="menu-span">
+            <img
+              class="i1wps9q8 dir dir-ltr"
+              src="{{ one.img1 }}"
+              alt=""
+              width="320"
+              height="300"
+            />
+          </span>
+          <span class="font">{{ one.title }}</span
+          ><br />
+          <span class="font">{{ one.location }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
